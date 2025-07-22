@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airpatrol"
+version = "0.1.0"
+description = "Python package for interacting with AirPatrol devices."
+authors = [
+    { name="Anton Dalgren", email="anton.dalgren@gmail.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = [
+    "aiohttp"
+]
+
+[project.urls]
+Homepage = "https://github.com/antondalgren/airpatrol" 
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "black",
+    "ruff",
+    "pre-commit"
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "UP", "C90", "N", "D", "A", "C4", "T20", "PT", "SIM", "RUF"]
+ignore = []
