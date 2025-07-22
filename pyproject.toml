@@ -25,7 +25,9 @@ dev = [
     "pytest-asyncio",
     "black",
     "ruff",
-    "pre-commit"
+    "pre-commit",
+    "build",
+    "twine"
 ]
 
 [tool.black]
